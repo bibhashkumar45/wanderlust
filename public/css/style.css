@@ -1,0 +1,134 @@
+body{
+        margin:0;
+        display:flex;
+        height: 100vh;                       /*Flex should be flex to define chieldren flex*/
+        flex-direction: column;
+}
+.container{
+        /* , it will take up all the remaining space in the container that isn't used by other elements (if there are any). */
+        flex:1;    
+
+}
+.navbar-expand-lg{
+        height:5rem;
+}
+/* icon */
+.brand {
+        font-size:2rem;
+        color:#fe424d;
+}
+
+/* nav-item */
+.nav-link{
+        font-size: 1rem;
+        color:#222222 !important;
+        font-weight: 500 !important;
+}
+/* Footer Css */
+.f-info{
+        text-align: center;
+        height: 8rem;
+        background-color: #ebebeb;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+}
+.f-social{
+        width:100%;
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center; */
+       
+}
+.term-condition{
+        width:100%;
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center; */
+}
+.fa-brands{
+        font-size: 25px;
+        margin-left: 5px;
+
+}
+.brand-logo{
+        width: 100%;
+        font-weight: 400;
+}
+
+.term-condition a{
+        text-decoration: none;
+        color:black !important;
+}
+
+/* cards */
+
+.card-listing{
+        border:none !important;
+        margin-bottom: 2rem;
+}
+
+.card-body{
+        padding:0;
+}
+/* image decoration */
+
+.card-img-top{
+        border-radius: 1rem !important;
+        width:100% !important;
+        object-fit: cover !important;
+}
+.listing-link{
+        text-decoration: none;
+}
+.card-img-overlay:hover{
+        background-color: white;
+        opacity:0.2;
+
+}
+
+/* show image */
+.show-img{
+        height: 30vh;
+}
+.show-detail{
+     
+        font-weight:400 ;
+}
+/* edit button */
+.edit{
+        text-decoration: none;
+        color: white;
+        width:100px;
+}
+.edit a{
+        text-decoration: none;
+        color: white;
+       
+}
+.edit-delete-btn{
+        display:flex;
+        
+}
+
+.fa-star{
+        font-size: 1.5ex;
+}
+
+/* .reviews-section{
+        display:flex;
+} */
+
+.edit-img{
+        height: 150px;
+        width: 150px;
+}
+
+/* Map */
+#map  
+{
+        height: 400px;
+        width: 80vh;
+}    

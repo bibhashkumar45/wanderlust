@@ -1,0 +1,121 @@
+<% layout("layout/boilerplate.ejs") -%>
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>Edit the list....</h3>
+      <form
+        method="post"
+        action="/listings/<%=listing._id%>?_method=PUT"
+        class="needs-validation"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-2 mt-2">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            name="listing[title]"
+            value="<%=listing.title%>"
+            id="title"
+            class="form-control"
+            required
+          />
+
+          <div class="valid-feedback">Looks good!</div>
+          <!-- feedback during summition of form-->
+          <div class="invalid-feedback">Please enter title.</div>
+        </div>
+
+        <div class="mb-2">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]"
+            required
+            class="form-control"
+            required
+          >
+<%=listing.description%></textarea
+          >
+
+          <div class="valid-feedback">Looks good!</div>
+          <!-- feedback during summition of form-->
+          <div class="invalid-feedback">Please enter description.</div>
+        </div>
+
+
+        <div class="mb-2">
+          <img class="edit-img" src="<%=originalUrl%>">
+        </div>
+        <div class="mb-2">
+          <label for="image" class="form-label">Upload Image</label>
+          <input
+            type="file"
+            name="listing[image]"
+            id="image"
+            class="form-control"
+          />
+
+          <div class="valid-feedback">Looks good!</div>
+          <!-- feedback during summition of form-->
+          <div class="invalid-feedback">Please enter image.</div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <div class="mb-2">
+              <label for="price" class="form-label">Price</label>
+              <input
+                type="text"
+                name="listing[price]"
+                value="<%=listing.price%>"
+                id="price"
+                class="form-control"
+                required
+              />
+
+              <div class="valid-feedback">Looks good!</div>
+              <!-- feedback during summition of form-->
+              <div class="invalid-feedback">Please enter price.</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="mb-2">
+              <label for="country" class="form-label">Country</label>
+              <input
+                type="text"
+                name="listing[country]"
+                value="<%=listing.country%>"
+                id="country"
+                class="form-control"
+                required
+              />
+
+              <div class="valid-feedback">Looks good!</div>
+              <!-- feedback during summition of form-->
+              <div class="invalid-feedback">Please enter country.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <label for="location" class="form-label">location</label>
+          <input
+            type="text"
+            name="listing[location]"
+            value="<%=listing.location%>"
+            id="location"
+            class="form-control"
+            required
+          />
+
+          <div class="valid-feedback">Looks good!</div>
+          <!-- feedback during summition of form-->
+          <div class="invalid-feedback">Please enter location.</div>
+        </div>
+
+        <button class="btn btn-success mb-3 mt-3">Fixed your change</button>
+      </form>
+    </div>
+  </div>
+</body>
